@@ -154,7 +154,7 @@ while wait() and doTrivia do
     if timeLeft <= 0 then
         
         if skipping == false then
-            setBooth("The answer was " .. correctAnswer, 281338499)
+            setBooth("The answer was " .. correctAnswer, 1178571822)
             round = round + 1
             wait(3)
                         
