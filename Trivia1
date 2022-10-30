@@ -114,7 +114,7 @@ function getBooth()
     return closestBooth
 end
 
-getgenv().correctAnswer = "Loading..."
+getgenv().correctAnswer = "Loading Question...."
 getgenv().correctPlayer = nil
 getgenv().correctPlayerScore = nil
 
@@ -176,7 +176,7 @@ while wait() and doTrivia do
     end
     
     if answered == true then
-        setBooth(correctPlayer .. " answered correctly and now has " .. correctPlayerScore .. " points!", 6641087396)
+        setBooth(correctPlayer .. " answered correctly and now has " .. correctPlayerScore .. " point(s)!", 6641087396)
         wait(3)
         answered = false
         timeLeft = 0
@@ -196,7 +196,7 @@ while wait() and doTrivia do
     if string.match(getBooth().Banner.SurfaceGui.Frame.Description.Text, "#") then
         timeLeft = 0
         if announceSkippingHastags then
-            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hashtags found in question - skipping to next question. Loading....", "All")
+            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Hashtags found in question. Skipping to next question....", "All")
         end
         skipping = true
     end
